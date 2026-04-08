@@ -73,7 +73,7 @@ export default function MapBg({ onDimChange }) {
         },
       })
 
-      fetch('/data/global_resilience.json')
+      fetch(`${import.meta.env.BASE_URL}data/global_resilience.json`)
         .then(r => r.json())
         .then(cities => {
           if (!mapRef.current) return

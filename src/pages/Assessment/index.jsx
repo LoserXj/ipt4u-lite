@@ -41,7 +41,7 @@ export default function Assessment() {
 
   // Load data
   useEffect(() => {
-    fetch('/data/global_resilience.json')
+    fetch(`${import.meta.env.BASE_URL}data/global_resilience.json`)
       .then(r => r.json())
       .then(data => setCities(data))
       .catch(err => console.warn('Failed to load resilience data', err))

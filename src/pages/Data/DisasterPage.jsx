@@ -36,8 +36,8 @@ export default function DisasterPage() {
   // ── Load data ────────────────────────────────────────────────────────────
   useEffect(() => {
     Promise.all([
-      fetch('/data/disaster_points.json').then(r => r.json()),
-      fetch('/data/disaster_summary.json').then(r => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/disaster_points.json`).then(r => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/disaster_summary.json`).then(r => r.json()),
     ]).then(([pts, sum]) => {
       setPoints(pts)
       setSummary(sum)
