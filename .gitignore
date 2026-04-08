@@ -1,0 +1,8 @@
+node_modules
+dist
+.env
+.env.local
+
+# 数据文件不上传
+public/data/
+.claude/
